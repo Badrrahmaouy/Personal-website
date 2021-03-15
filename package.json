@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "webpack --config webpack.prod.js",
-    "build-d": "webpack --config webpack.dev.js --open"
+    "build-d": "webpack serve --config webpack.dev.js --open"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,8 @@
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
-    "babel-loader": "^8.2.2"
+    "babel-loader": "^8.2.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
