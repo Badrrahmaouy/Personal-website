@@ -4,7 +4,9 @@
   "description": "personal website",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack --config webpack.prod.js",
+    "build-d": "webpack --config webpack.dev.js --open"
   },
   "repository": {
     "type": "git",
