@@ -1,0 +1,20 @@
+{
+  "name": "badr-rahmaouy",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "personal-website"
+  },
+  "author": "Badr Rahmaouy",
+  "license": "ISC",
+  "dependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.26.0"
+  }
+}
