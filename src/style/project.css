@@ -1,0 +1,11 @@
+#project {
+  grid-area: desc;
+  background-color: #eceaea;
+  width: 50vw;
+  height: 20vh;
+  margin-left: 155px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: none;
+}
+/*# sourceMappingURL=project.css.map */
