@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=document.getElementById("project");function t(){"block"===e.style.display?e.style.display="none":e.style.display="block"}window.addEventListener("load",(e=>{document.getElementById("project1").addEventListener("click",t)}))})();
