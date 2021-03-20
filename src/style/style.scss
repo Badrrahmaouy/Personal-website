@@ -1,7 +1,9 @@
-$main-font: 'Righteous', cursive;
+$main-font: 'Montserrat', sans-serif;
+
 
 body {
     margin: 0;
+    background-color: #f3faff
 }
 
 .text {
@@ -11,6 +13,7 @@ body {
 
 #container {
     position: relative;
+    height: 100vh;
     display: grid;
     grid-template-areas: 
     "hd"
@@ -18,88 +21,153 @@ body {
     "footer";
     
     header {
-        margin: 40px 0 0 50px;
-        display: grid;
-        grid-template-columns: 50% 50%;
+        grid: hd;
         position: relative;
+        display: grid;
+        @media (min-width: 900px) {
+            margin: 40px 0 0 50px;
+            grid-template-columns: 50% 50%;
+        }
+        @media (max-width: 901px) {
+            display: grid;
+            grid-template-rows: 50% 50%;
+            padding: 20px;
+        }
+
+        #intestation{
+            @media (max-width: 901px) {
+               text-align: center; 
+            }
+            @media (min-width: 900px) {
+               text-align: left; 
+            }
+
+            #page-title {
+                @media (min-width: 900px) {
+                font-size: 3em;
+                }
+                @media (max-width: 901px) {
+                font-size: 5em;
+                }
+
+                font-weight: 700;
+            }
+    
+            #job { 
+                @media (min-width: 900px) {
+                font-size: 2.5em;
+                }
+                @media (max-width: 901px) {
+                font-size: 3.5em;
+                }
+            }
+        }
         
-        #page-title {
-            text-align: left;
-            font-size: 4em;
-        }
-
-        #job {
-            text-align: left;
-            font-size: 3em;
-
-        }
         
         #contacts {
-            margin-top: 30px;
             font-size: 1.5em;
+            font-family: $main-font;
+            @media(max-width: 901px) {
+                margin-top: 100px;
+                text-align: center;
+            }
             
-            #cv {
+            a{
                 color: black;
+                margin: 15px;
+            }
+            
+            .row {
+                text-align: center;
+                margin-bottom: 20px;
+                @media(max-width: 901px) {
+                    display: inline-block;
+                }
+            }
+
+            #cv {
                 text-decoration: underline;
-                position: absolute;
-                right: 250px;
             }
             
             #email {
-                color: black;
                 text-decoration: underline;
-                position: absolute;
-                right: 80px
             }
 
             #github {
-                color: black;
                 margin-top: 60px;
-                position: absolute;
-                right: 280px;
                 font-size: 2em;
+                margin-right: 120px;
             }
             
             #linkedin {
-                color: black;
+                color:#006097;
                 margin-top: 60px;
-                position: absolute;
-                right: 120px;
                 font-size: 2em;
             }
         }
     }
 
     main {
-        display: flex;
-        flex-direction: column;
-        height: 60vh;
+        grid: main;
+        display: grid;
+        text-align: center;
+        @media (min-width: 900px) {
+            margin-top: 250px;
+            grid-template-columns: repeat(3, auto);
+        }
+        @media (max-width: 901px) {
+            grid-template-rows: repeat(3, auto);
+            grid-gap: 50px;
+        }
 
-        div {
-            font-size: 1.5em;
-            margin-top: 20px;
+        a {
+            cursor: pointer;
+            color: black;
+
+            .card {
+                background-color: #e8f4ff;
+                margin: auto;
+                width: 350px;
+                border: 1px solid lightgray;
+                border-radius: 15px;
+                box-shadow: 3px 7px #035f97;
+                display: inline-block;
+                font-family: $main-font;
+                text-align: left;
+
+                .text-title-card {
+                    font-size: 1.2em; 
+                    text-align: center;
+                }   
+
+                .text-card {
+                    font-size: 0.8em;
+                    margin: 10px;
+                }
+
+                ul {
+                    padding-left: 20px;
+                    font-size: 0.8em;
+                }
+            }
         }
     }
 
     footer {
-        background-color: #eceaea;
+        grid: footer;
+        background-color: #045e97;
         position: relative;
-
-        #footer-container {
-            grid-area: "footer";
-            height: 17vh;
-            display: grid;
-            grid-template-columns: repeat(3, 13%);
-            justify-content: center;
-            align-items: center;
-            grid-gap: 0;
-            color: rgb(78, 74, 74);
-            font-size: 1.5em;
+        width: 100%;
+        @media (max-width: 901px) {
+            margin-top: 40px;
+            height: 6vh;
+            text-align: center;
         }
-
+        
         div {
-            position: relative;
-            bottom: 10px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
         }
     }
 }

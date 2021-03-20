@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #f4f4f4;
 }
 
 .text {
@@ -15,47 +16,99 @@ body {
 }
 
 #container header {
+  margin: 40px 0 0 50px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (25%)[4];
-      grid-template-columns: repeat(4, 25%);
-  grid-area: "hd";
-  height: 50px;
-  background-color: black;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  position: relative;
 }
 
-#container header #header-title, #container header a {
-  color: white;
+#container header #page-title {
+  text-align: left;
+  font-size: 4em;
+}
+
+#container header #job {
+  text-align: left;
+  font-size: 3em;
+}
+
+#container header #contacts {
+  margin-top: 30px;
+  font-size: 1.5em;
+  font-family: "Montserrat", sans-serif;
+}
+
+#container header #contacts #cv {
+  color: black;
+  text-decoration: underline;
+  position: absolute;
+  right: 250px;
+}
+
+#container header #contacts #email {
+  color: black;
+  text-decoration: underline;
+  position: absolute;
+  right: 80px;
+}
+
+#container header #contacts #github {
+  color: black;
+  margin-top: 60px;
+  position: absolute;
+  right: 280px;
+  font-size: 2em;
+}
+
+#container header #contacts #linkedin {
+  color: #006097;
+  margin-top: 60px;
+  position: absolute;
+  right: 120px;
+  font-size: 2em;
 }
 
 #container main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 60vh;
-}
-
-#container main #page-title {
-  font-size: 7em;
+  margin-top: 250px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
   text-align: center;
-  margin-top: 100px;
 }
 
-#container main div {
-  font-size: 1.5em;
-  margin-top: 20px;
+#container main a {
+  cursor: pointer;
+  color: black;
+}
+
+#container main a .card {
+  margin: auto;
+  width: 350px;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 10px gray;
+          box-shadow: 5px 10px gray;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+
+#container main a .card .text-title-card {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+#container main a .card .text-card {
+  font-size: 0.8em;
+  margin: 10px;
+}
+
+#container main a .card ul {
+  padding-left: 20px;
+  font-size: 0.8em;
 }
 
 #container footer {
