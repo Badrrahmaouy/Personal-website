@@ -18,18 +18,55 @@ body {
     "footer";
     
     header {
+        margin: 40px 0 0 50px;
         display: grid;
-        grid-template-columns: repeat(4, 25%);
-        grid-area: "hd";
-        height: 50px;
-        background-color: black;
-        justify-content: center;
-        align-items: center;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        grid-template-columns: 50% 50%;
+        position: relative;
+        
+        #page-title {
+            text-align: left;
+            font-size: 4em;
+        }
 
-        #header-title, a {
-            color: white;
+        #job {
+            text-align: left;
+            font-size: 3em;
+
+        }
+        
+        #contacts {
+            margin-top: 30px;
+            font-size: 1.5em;
+            
+            #cv {
+                color: black;
+                text-decoration: underline;
+                position: absolute;
+                right: 250px;
+            }
+            
+            #email {
+                color: black;
+                text-decoration: underline;
+                position: absolute;
+                right: 80px
+            }
+
+            #github {
+                color: black;
+                margin-top: 60px;
+                position: absolute;
+                right: 280px;
+                font-size: 2em;
+            }
+            
+            #linkedin {
+                color: black;
+                margin-top: 60px;
+                position: absolute;
+                right: 120px;
+                font-size: 2em;
+            }
         }
     }
 
@@ -37,16 +74,6 @@ body {
         display: flex;
         flex-direction: column;
         height: 60vh;
-
-        #page-title {
-            font-size: 7em;
-            text-align: center;
-            // position: relative;
-            // left: 100px;
-            // top: 100px;
-            // margin: 100px 0 0 100px;
-            margin-top: 100px;
-        }
 
         div {
             font-size: 1.5em;
